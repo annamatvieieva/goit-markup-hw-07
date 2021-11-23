@@ -1,0 +1,67 @@
+.footer {
+  background-color: #2f303a;
+  color: var(--third-text-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer address {
+  font-style: normal;
+}
+
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-iformation {
+  display: flex;
+}
+
+.adress-information {
+  margin-right: 70px;
+}
+.adress-item {
+  margin-bottom: 9px;
+}
+
+.footer .contact-link {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+footer .logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer .contact-link:hover,
+.footer .contact-link:focus {
+  color: var(--fourth-text-color);
+}
+
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
+
+.social-information {
+  padding-top: 12px;
+  margin-right: 93px;
+}
+
+footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-logo {
+  fill: var(--primary-back-color);
+}
