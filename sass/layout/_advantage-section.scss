@@ -1,12 +1,12 @@
 .advantage-list {
   display: flex;
 }
-.advantage-item:not(:last-child) {
-  margin-right: 30px;
-}
 
 .advantage-item {
   flex-basis: calc(100% / 4 - 30px);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantage-form {

@@ -16,13 +16,12 @@
   display: flex;
 }
 
-.example-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .example-item {
   flex-basis: calc(100% / 3 - 30px);
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .example-description {

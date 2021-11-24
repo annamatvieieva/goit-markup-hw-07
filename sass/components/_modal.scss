@@ -31,9 +31,8 @@
 
 .modal-icon {
   fill: var(--primary-text-color);
-}
-
-.modal-btn:hover .modal-icon,
-.modal-btn:focus .modal-icon {
-  fill: var(--fourth-text-color);
+  .modal-btn:hover &,
+  .modal-btn:focus & {
+    fill: var(--fourth-text-color);
+  }
 }

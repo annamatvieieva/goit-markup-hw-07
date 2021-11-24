@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-text-color: #212121;
   --second-text-color: #757575;
@@ -74,8 +73,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background-color: #188ce8;
 }
 
@@ -86,13 +84,21 @@ img {
   margin: 0 auto;
 }
 
-.logo-link {
+.logo__link {
   font-family: var(--second-text-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--fourth-text-color);
+}
+
+.logo__text {
+  color: var(--primary-text-color);
+}
+
+.logo__text--white {
+  color: var(--third-text-color);
 }
 
 .section {
@@ -120,19 +126,18 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-link:hover, .social-link:focus {
   background-color: #2196f3;
-}
-
-.social-link:hover .social-logo,
-.social-link:focus .social-logo {
-  fill: var(--primary-back-color);
 }
 
 .social-logo {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-logo,
+.social-link:focus .social-logo {
+  fill: var(--primary-back-color);
 }
 
 .social-list {
@@ -152,7 +157,7 @@ img {
   transition-timing-function: linear;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
@@ -238,10 +243,6 @@ img {
   border: 1px solid #2196f3;
 }
 
-.form-field:focus + .form-icon {
-  fill: var(--fourth-text-color);
-}
-
 .form-message {
   height: 120px;
   resize: none;
@@ -281,15 +282,8 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox-text::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  cursor: pointer;
-  margin-right: 7px;
+.form-field:focus + .form-icon {
+  fill: var(--fourth-text-color);
 }
 
 .modal-checkbox-text {
@@ -303,13 +297,24 @@ img {
   margin-bottom: 30px;
 }
 
+.modal-checkbox-text::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
 .modal-checkbox:checked + .modal-checkbox-text::before {
   background-image: url(../images/check.svg);
   background-size: contain;
   border: 0;
 }
 
-.contact-link {
+.contact__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -320,8 +325,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.contact__link:hover, .contact__link:focus {
   color: var(--fourth-text-color);
 }
 
@@ -388,45 +392,35 @@ body {
   color: var(--primary-text-color);
 }
 
-.header-section {
+.header {
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
-.header-section .container {
+.header .container {
   display: flex;
   align-items: center;
 }
 
-/* Лого */
-header .logo-link {
+.header .logo__link {
   margin-right: 93px;
 }
 
-.logo-text {
-  color: var(--primary-text-color);
-}
-
-.logo-text-white {
-  color: var(--third-text-color);
-}
-
-/* Навигация */
-.header-nav {
+.nav {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
 }
 
-.nav-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-link {
+.nav__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -436,13 +430,11 @@ header .logo-link {
   position: relative;
 }
 
-.nav-link.nav-link-active,
-.nav-link:hover,
-.nav-link:focus {
+.nav__link.nav__link--active, .nav__link:hover, .nav__link:focus {
   color: var(--fourth-text-color);
 }
 
-.nav-link-active::after {
+.nav__link--active::after {
   content: "";
   background-color: #2196f3;
   border-radius: 2px;
@@ -454,24 +446,23 @@ header .logo-link {
   bottom: -32px;
 }
 
-/* Контакты */
-.contact-list {
+.contact {
   display: flex;
   margin-left: auto;
 }
 
-.contact-item:not(:last-child) {
+.contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-icon {
+.contact__icon {
   fill: var(--second-text-color);
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link:hover .contact-icon,
-.contact-link:focus .contact-icon {
+.contact__link:hover .contact__icon,
+.contact__link:focus .contact__icon {
   fill: var(--fourth-text-color);
 }
 
@@ -505,8 +496,7 @@ header .logo-link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:hover, .hero-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -514,12 +504,12 @@ header .logo-link {
   display: flex;
 }
 
-.advantage-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .advantage-item {
   flex-basis: calc(100% / 4 - 30px);
+}
+
+.advantage-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .advantage-form {
@@ -566,13 +556,13 @@ header .logo-link {
   display: flex;
 }
 
-.example-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .example-item {
   flex-basis: calc(100% / 3 - 30px);
   position: relative;
+}
+
+.example-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .example-description {
@@ -603,15 +593,15 @@ header .logo-link {
   display: flex;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .team-item {
   background-color: var(--primary-back-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc(100% / 4 - 30px);
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .description {
@@ -663,19 +653,18 @@ header .logo-link {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover,
-.client-link:focus {
+.client-link:hover, .client-link:focus {
   border-color: var(--fourth-text-color);
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: var(--fourth-text-color);
 }
 
 .client-icon {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--fourth-text-color);
 }
 
 .filter-btn {
@@ -694,9 +683,7 @@ header .logo-link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-btn:hover,
-.filter-btn:focus,
-.filter-btn.active {
+.filter-btn:hover, .filter-btn:focus, .filter-btn.active {
   background-color: var(--fourth-text-color);
   color: var(--third-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -717,8 +704,7 @@ header .logo-link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio-link:hover, .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -799,6 +785,29 @@ header .logo-link {
   font-style: normal;
 }
 
+.footer .contact-link {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer .contact-link:hover, .footer .contact-link:focus {
+  color: var(--fourth-text-color);
+}
+
+footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-logo {
+  fill: var(--primary-back-color);
+}
+
+footer .logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -816,22 +825,6 @@ header .logo-link {
   margin-bottom: 9px;
 }
 
-.footer .contact-link {
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-footer .logo-link {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.footer .contact-link:hover,
-.footer .contact-link:focus {
-  color: var(--fourth-text-color);
-}
-
 .social-title {
   font-weight: 700;
   font-size: 14px;
@@ -845,13 +838,5 @@ footer .logo-link {
 .social-information {
   padding-top: 12px;
   margin-right: 93px;
-}
-
-footer .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-footer .social-logo {
-  fill: var(--primary-back-color);
 }
 /*# sourceMappingURL=main.css.map */
